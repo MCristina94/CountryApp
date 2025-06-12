@@ -2,10 +2,12 @@ import { Component, inject, signal } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { CountryService } from "../../services/country.service";
 import { Country } from "../../interfaces/country.interface";
+import { NotFoundComponent } from "../../../shared/components/not-found/not-found.component";
+import { NgIf } from "@angular/common";
 
 @Component({
     selector: "app-country-page",
-    imports: [],
+    imports: [NotFoundComponent, NgIf],
     templateUrl: "./country-page.component.html",
 })
 export class CountryPageComponent {
