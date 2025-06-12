@@ -1,2 +1,9 @@
-<country-search-input placeholder="Buscar por país" />
-<country-table-list [countries]="[]" />
+<country-search-input
+    (value)="onSearch($event)"
+    placeholder="Buscar por país"
+/>
+@if (isError()) {
+<h3 class="mt-5">{{ isError() }}</h3>
+} @else {
+<country-table-list [countries]="countries()" />
+}
