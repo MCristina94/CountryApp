@@ -4,10 +4,11 @@ import { CountryService } from "../../services/country.service";
 import { Country } from "../../interfaces/country.interface";
 import { NotFoundComponent } from "../../../shared/components/not-found/not-found.component";
 import { NgIf } from "@angular/common";
+import { CountryInformationComponent } from "./country-information/country-information.component";
 
 @Component({
     selector: "app-country-page",
-    imports: [NotFoundComponent, NgIf],
+    imports: [NotFoundComponent, NgIf, CountryInformationComponent],
     templateUrl: "./country-page.component.html",
 })
 export class CountryPageComponent {

@@ -6,9 +6,7 @@
 }
 <!--  -->
 <div *ngIf="country() as country">
-    <h2>{{ country.name }}</h2>
-    <p>Capital: {{ country.capital }}</p>
-    <!-- Más campos -->
+    <app-country-information [country]="country" />
 </div>
 
 <!-- <p>{{ country()!.name }}</p> -->
